@@ -1,5 +1,7 @@
 # Running
 
+## Running in erlang shell
+
 Start erlang shell:
 
 ```sh
@@ -15,5 +17,25 @@ c(hello).
 Run:
 
 ```sh
-hello:world().
+hello:start().
+```
+
+Stop erlang shell:
+
+```sh
+halt().
+```
+
+## Compiling and running outside erlang shell
+
+Compile:
+
+```sh
+erlc hello.erl
+```
+
+Run:
+
+```
+erl -noshell -s hello start -s init stop
 ```
